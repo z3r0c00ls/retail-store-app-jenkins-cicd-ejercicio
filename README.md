@@ -20,6 +20,22 @@ Este proyecto está destinado únicamente con fines educativos y no para uso en 
 
 La aplicación ha sido deliberadamente sobreingenierizada para generar múltiples componentes desacoplados. Estos componentes generalmente tienen diferentes dependencias de infraestructura y pueden admitir varios "backends" (por ejemplo: el servicio de Carritos admite MongoDB o DynamoDB).
 
+```
+.
+├── README.md
+├── docker-compose.yml
+├── docs
+│   └── images
+└── src
+    ├── assets
+    ├── cart
+    ├── catalog
+    ├── checkout
+    ├── orders
+    └── ui
+```
+
+
 ![Screenshot](/docs/images/arq.png)
 
 # Docker Compose
