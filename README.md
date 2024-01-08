@@ -83,7 +83,7 @@ El objetivo de este desafío es establecer un flujo de Integración Continua (CI
    - Crea un job de CI para realizar la compilación de la aplicación cada vez que se realice un cambio en el repositorio.
    - Utiliza Jenkinsfile para definir el pipeline de CI.
    - Asegúrate de que la compilación sea exitosa antes de pasar a la etapa de entrega continua.
-   - Construir imagen y subir a docker-hub
+   - Construir imagen, versionarla y subir a docker-hub
 
 ### 4. Implementación de CD con Docker Compose:
    - Crea un job de CD que implemente la aplicación utilizando Docker Compose.
