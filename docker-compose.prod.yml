@@ -83,7 +83,7 @@ services:
       - MYSQL_PASSWORD=secret
 
   checkout:
-    image: REGISTRY/REPOSITORY:checkout-v1
+    image: REGISTRY/REPOSITORY:ui-v1
     container_name: checkout
     restart: always
     read_only: true
