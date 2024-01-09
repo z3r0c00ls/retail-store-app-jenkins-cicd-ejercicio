@@ -4,6 +4,7 @@ pipeline {
         DOCKER_HUB_LOGIN = credentials('docker')
         REGISTRY = "roxsross12"
         REPOSITORY= "retail-store-app"
+        SERVER= "ec2-user@35.84.193.83"
     }
     stages {
         stage('docker build') {
@@ -37,6 +38,17 @@ pipeline {
                 cat docker-compose.prod.yml
                 '''
             }
-        }        
+        } 
+        stage('Deploy To EC2') {
+            steps {
+                sshagent (['ssh-aws']) {
+                    sh '''
+                    scp -o StrictHostKeyChecking=no docker-compose.prod.yml $SERVER:/home/ec2-user
+                    ssh -o StrictHostKeyChecking=no $SERVER ls 
+                    '''
+
+                }
+            }
+        }                
     }
 }
