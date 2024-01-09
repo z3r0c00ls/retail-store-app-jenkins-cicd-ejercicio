@@ -45,6 +45,7 @@ pipeline {
                     sh '''
                     scp -o StrictHostKeyChecking=no docker-compose.prod.yml $SERVER:/home/ec2-user
                     ssh -o StrictHostKeyChecking=no $SERVER ls 
+                    ssh -o StrictHostKeyChecking=no $SERVER docker-compose up -d 
                     '''
 
                 }
