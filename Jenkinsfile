@@ -32,8 +32,8 @@ pipeline {
         stage('update compose') {
             steps {
                 sh '''
-                sed -i -- 's/REGISTRY/${REGISTRY}/g' docker-compose.prod.yml
-                sed -i -- 's/REPOSITORY/${REPOSITORY}/g' docker-compose.prod.yml
+                sed -i -- "s/REGISTRY/$REGISTRY/g" docker-compose.prod.yml
+                sed -i -- "s/REPOSITORY/$REPOSITORY/g" docker-compose.prod.yml
                 cat docker-compose.prod.yml
                 '''
             }
